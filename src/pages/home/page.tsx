@@ -38,8 +38,8 @@ const HomePage = () => {
             health?.status === "healthy"
               ? "text-success"
               : health?.status === "degraded"
-              ? "text-warning"
-              : "text-error"
+                ? "text-warning"
+                : "text-error"
           )}
         />
         <StatsCard title="Nodes" icon={HardDrive} value={health?.knownNodes} />
@@ -56,7 +56,7 @@ const HomePage = () => {
         <StatsCard
           title="Active Storage Nodes"
           icon={DatabaseZap}
-          value={health?.storageNodesOk}
+          value={health?.storageNodesUp}
         />
         <StatsCard
           title="Partitions"

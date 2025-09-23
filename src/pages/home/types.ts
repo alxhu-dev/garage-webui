@@ -5,7 +5,7 @@ export type GetHealthResult = {
   knownNodes: number;
   connectedNodes: number;
   storageNodes: number;
-  storageNodesOk: number;
+  storageNodesUp: number;
   partitions: number;
   partitionsQuorum: number;
   partitionsAllOk: number;
