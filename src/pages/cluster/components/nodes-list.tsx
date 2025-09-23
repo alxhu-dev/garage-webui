@@ -108,7 +108,7 @@ const NodesList = ({ nodes }: NodeListProps) => {
 
   const onRevert = () => {
     if (
-      window.confirm("Are you sure you want to revert layout changes?") &&
+      window.confirm("Are you sure you want to revert any changes made?") &&
       data?.version != null
     ) {
       revertChanges.mutate(data?.version + 1);
@@ -117,7 +117,7 @@ const NodesList = ({ nodes }: NodeListProps) => {
 
   const onApply = () => {
     if (
-      window.confirm("Are you sure you want to revert layout changes?") &&
+      window.confirm("Are you sure you want to apply your layout changes?") &&
       data?.version != null
     ) {
       applyChanges.mutate(data?.version + 1);
@@ -247,7 +247,7 @@ const NodesList = ({ nodes }: NodeListProps) => {
                           ` (${Math.round(
                             (item.dataPartition.available /
                               item.dataPartition.total) *
-                              100
+                            100
                           )}%)`}
                       </p>
                     </div>
@@ -262,8 +262,8 @@ const NodesList = ({ nodes }: NodeListProps) => {
                   {item.draining
                     ? "Draining"
                     : item.isUp
-                    ? "Active"
-                    : "Inactive"}
+                      ? "Active"
+                      : "Inactive"}
                 </Badge>
 
                 <Dropdown
